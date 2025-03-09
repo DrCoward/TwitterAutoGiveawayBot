@@ -9,13 +9,13 @@ from pathlib import Path
 
 # Vars
 MaxScrolls = 3
-SearchTerm = 'Valorant Giveaway'
-CommentText = "Done @Fishy @Yoru"
+SearchTerm = ['Valorant Giveaway','Steam key Giveaway']
+CommentText = "Done @Brendon72139655 @Brendon12811"
 Complements = ['Gl everyone', 'Good luck to everyone else!', 'Good luck to everybody', 'Bless you for giving this away', 'Appreciate the giveaway', 'Best of luck to everyone!']
 TinyPrint = True
 
-ct0 = "r39123i123jfaf"
-auth = "41841y2fhahf4914fada"
+ct0 = "a9eca882ba6282b4749710ba878775ec73a63f3f4723381ae374a758ec020ad71071940705eb5b4d9ab081cb70fbbd85adf9cdada8d4c3189dc289298b6c034055c5a4211336ca573927b9ccbc465de2"
+auth = "ec73652b757ca0b93948005fba010afad4a79cb9"
 
 
 
