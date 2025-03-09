@@ -77,17 +77,22 @@ def Follow(userID):
 # Search for Tweets
 def Search(searchT, cursor):
     params = {
-        'q': searchT,
-        'count': '20',
-        'tweet_mode': 'extended',
-        'query_source': 'recent_search_click',
-        'pc': '1',
-        'spelling_corrections': '1',
-        'ext': 'mediaStats,highlightedLabel',
+        "q": searchT,
+        "count": "20",
     }
-    if cursor:
-        params['cursor'] = cursor
-    return httpx.get("https://api.twitter.com/2/search/adaptive.json", headers=headers, cookies=cookies, params=params)
+    response = httpx.get(
+        "https://api.twitter.com/2/search/adaptive.json",
+        headers=headers,
+        cookies=cookies,
+        params=params,
+    )
+
+    if response.status_code != 200:
+        print(f"Error: Received status code {response.status_code}")
+        print("Response text:", response.text)
+        return None  # Return None if the request failed
+
+    return response
 
 # Get User Info
 def getInfo(userID):
