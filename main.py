@@ -141,10 +141,10 @@ def main():
     while scrollCounter <= MaxScrolls:
         r = Search(SearchTerm, "")
         try:
-    data = json.loads(r.text)
-except json.JSONDecodeError:
-    print("Failed to parse JSON. Response:", r.text)
-    exit(1)
+            data = json.loads(r.text)
+        except json.JSONDecodeError:
+            print("Failed to parse JSON. Response:", r.text)
+            exit(1)
 
 
         tweets = data['globalObjects']['tweets']
